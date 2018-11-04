@@ -1,6 +1,12 @@
 import {map as asyncMap, waterfall} from 'async';
 import api from './api';
 
+/**
+ * getCity
+ * @param keyword
+ * @param cb
+ * @returns {*}
+ */
 export function getCity(keyword, cb) {
 
 	let cities = store('cities') || [];
@@ -28,6 +34,13 @@ export function getCity(keyword, cb) {
 
 }
 
+/**
+ * Get Weather
+ *
+ * @param woeid
+ * @param cb
+ * @returns {*}
+ */
 export function getWeather(woeid, cb) {
 	const key   = 'weather-' + woeid;
 	let weather = store(key);
@@ -46,6 +59,11 @@ export function getWeather(woeid, cb) {
 	});
 }
 
+/**
+ * Get Weathers
+ * @param keywords
+ * @param cb
+ */
 export function getWeathers(keywords, cb) {
 
 	waterfall([

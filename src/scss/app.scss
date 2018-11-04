@@ -5,7 +5,7 @@
   height: 100px;
   margin-bottom: 30px;
   .brand {
-    color: $body-color;
+    color: $orange;
     font-weight: 500;
     font-size: 20px;
     &:hover, &:focus, &:active {
@@ -91,7 +91,7 @@
 }
 
 .today-item {
-  outline: 1px solid palevioletred;
+  outline: 1px solid $orange;
   outline-offset: 5px;
 }
 
@@ -117,4 +117,8 @@
 [v-cloak] {
   visibility: hidden;
   pointer-events: none;
+}
+
+a {
+  color: $orange;
 }
