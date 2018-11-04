@@ -25,7 +25,7 @@ gulp.task('default', function () {
 	gulp.watch('src/scss/**/*.scss', ['styles']);
 
 	//reload on view changes
-	gulp.watch('app/views/**/*.php', () => livereload.reload());
+	gulp.watch('app/views/**/*.html', () => livereload.reload());
 
 	// force run first compilation
 	gulp.run(['styles']);

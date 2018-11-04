@@ -17458,7 +17458,7 @@ module.exports = function xhrAdapter(config) {
     // For IE 8/9 CORS support
     // Only supports POST and GET calls and doesn't returns the response headers.
     // DON'T do this for testing b/c XMLHttpRequest is mocked, not XDomainRequest.
-    if ("development" !== 'test' &&
+    if ("production" !== 'test' &&
         typeof window !== 'undefined' &&
         window.XDomainRequest && !('withCredentials' in request) &&
         !isURLSameOrigin(config.url)) {
@@ -17684,8 +17684,7 @@ module.exports = Cancel;
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_weather_script_js__ = __webpack_require__(139);
 /* unused harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_cde962ee_hasScoped_false_buble_transforms_weather_template_html__ = __webpack_require__(171);
-var disposed = false
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1e7800aa_hasScoped_false_buble_transforms_weather_template_html__ = __webpack_require__(171);
 var normalizeComponent = __webpack_require__(3)
 /* script */
 
@@ -17701,29 +17700,12 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_weather_script_js__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_cde962ee_hasScoped_false_buble_transforms_weather_template_html__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1e7800aa_hasScoped_false_buble_transforms_weather_template_html__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "components/weather.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-cde962ee", Component.options)
-  } else {
-    hotAPI.reload("data-v-cde962ee", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
 
 /* harmony default export */ __webpack_exports__["a"] = (Component.exports);
 
@@ -29081,7 +29063,7 @@ function assert (condition, message) {
 }
 
 function warn (condition, message) {
-  if ("development" !== 'production' && !condition) {
+  if (false) {
     typeof console !== 'undefined' && console.warn(("[vue-router] " + message));
   }
 }
@@ -29192,7 +29174,7 @@ function resolveProps (route, config) {
     case 'boolean':
       return config ? route.params : undefined
     default:
-      if (true) {
+      if (false) {
         warn(
           false,
           "props in \"" + (route.path) + "\" is a " + (typeof config) + ", " +
@@ -29236,7 +29218,7 @@ function resolveQuery (
   try {
     parsedQuery = parse(query || '');
   } catch (e) {
-    "development" !== 'production' && warn(false, e.message);
+    "production" !== 'production' && warn(false, e.message);
     parsedQuery = {};
   }
   for (var key in extraQuery) {
@@ -30159,7 +30141,7 @@ function fillParams (
       (regexpCompileCache[path] = pathToRegexp_1.compile(path));
     return filler(params || {}, { pretty: true })
   } catch (e) {
-    if (true) {
+    if (false) {
       warn(false, ("missing param for " + routeMsg + ": " + (e.message)));
     }
     return ''
@@ -30211,7 +30193,7 @@ function addRouteRecord (
 ) {
   var path = route.path;
   var name = route.name;
-  if (true) {
+  if (false) {
     assert(path != null, "\"path\" is required in a route configuration.");
     assert(
       typeof route.component !== 'string',
@@ -30253,7 +30235,7 @@ function addRouteRecord (
     // Warn if route is named, does not redirect and has a default child route.
     // If users navigate to this route by name, the default child will
     // not be rendered (GH Issue #629)
-    if (true) {
+    if (false) {
       if (route.name && !route.redirect && route.children.some(function (child) { return /^\/?$/.test(child.path); })) {
         warn(
           false,
@@ -30302,7 +30284,7 @@ function addRouteRecord (
   if (name) {
     if (!nameMap[name]) {
       nameMap[name] = record;
-    } else if ("development" !== 'production' && !matchAs) {
+    } else if (false) {
       warn(
         false,
         "Duplicate named routes definition: " +
@@ -30314,7 +30296,7 @@ function addRouteRecord (
 
 function compileRouteRegex (path, pathToRegexpOptions) {
   var regex = pathToRegexp_1(path, [], pathToRegexpOptions);
-  if (true) {
+  if (false) {
     var keys = Object.create(null);
     regex.keys.forEach(function (key) {
       warn(!keys[key.name], ("Duplicate param keys in route with path: \"" + path + "\""));
@@ -30357,7 +30339,7 @@ function normalizeLocation (
     } else if (current.matched.length) {
       var rawPath = current.matched[current.matched.length - 1].path;
       next.path = fillParams(rawPath, params, ("path " + (current.path)));
-    } else if (true) {
+    } else if (false) {
       warn(false, "relative params navigation requires a current route.");
     }
     return next
@@ -30421,7 +30403,7 @@ function createMatcher (
 
     if (name) {
       var record = nameMap[name];
-      if (true) {
+      if (false) {
         warn(record, ("Route with name '" + name + "' does not exist"));
       }
       if (!record) { return _createRoute(null, location) }
@@ -30473,7 +30455,7 @@ function createMatcher (
     }
 
     if (!redirect || typeof redirect !== 'object') {
-      if (true) {
+      if (false) {
         warn(
           false, ("invalid redirect option: " + (JSON.stringify(redirect)))
         );
@@ -30494,7 +30476,7 @@ function createMatcher (
     if (name) {
       // resolved named direct
       var targetRecord = nameMap[name];
-      if (true) {
+      if (false) {
         assert(targetRecord, ("redirect failed: named route \"" + name + "\" not found."));
       }
       return match({
@@ -30517,7 +30499,7 @@ function createMatcher (
         hash: hash
       }, undefined, location)
     } else {
-      if (true) {
+      if (false) {
         warn(false, ("invalid redirect option: " + (JSON.stringify(redirect))));
       }
       return _createRoute(null, location)
@@ -30622,7 +30604,7 @@ function handleScroll (
     return
   }
 
-  if (true) {
+  if (false) {
     assert(typeof behavior === 'function', "scrollBehavior must be a function");
   }
 
@@ -30639,7 +30621,7 @@ function handleScroll (
       shouldScroll.then(function (shouldScroll) {
         scrollToPosition((shouldScroll), position);
       }).catch(function (err) {
-        if (true) {
+        if (false) {
           assert(false, err.toString());
         }
       });
@@ -30829,7 +30811,7 @@ function resolveAsyncComponents (matched) {
 
         var reject = once(function (reason) {
           var msg = "Failed to resolve async component " + key + ": " + reason;
-          "development" !== 'production' && warn(false, msg);
+          "production" !== 'production' && warn(false, msg);
           if (!error) {
             error = isError(reason)
               ? reason
@@ -31519,7 +31501,7 @@ var VueRouter = function VueRouter (options) {
       this.history = new AbstractHistory(this, options.base);
       break
     default:
-      if (true) {
+      if (false) {
         assert(false, ("invalid mode: " + mode));
       }
   }
@@ -31542,7 +31524,7 @@ prototypeAccessors.currentRoute.get = function () {
 VueRouter.prototype.init = function init (app /* Vue component instance */) {
     var this$1 = this;
 
-  "development" !== 'production' && assert(
+  "production" !== 'production' && assert(
     install.installed,
     "not installed. Make sure to call `Vue.use(VueRouter)` " +
     "before creating root instance."
@@ -31700,8 +31682,7 @@ if (inBrowser && window.Vue) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_home_page_script_js__ = __webpack_require__(8);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_ae1c7cdc_hasScoped_false_buble_transforms_home_page_template_html__ = __webpack_require__(172);
-var disposed = false
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1bd239e1_hasScoped_false_buble_transforms_home_page_template_html__ = __webpack_require__(172);
 var normalizeComponent = __webpack_require__(3)
 /* script */
 
@@ -31717,29 +31698,12 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_home_page_script_js__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_ae1c7cdc_hasScoped_false_buble_transforms_home_page_template_html__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1bd239e1_hasScoped_false_buble_transforms_home_page_template_html__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "components/home-page.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-ae1c7cdc", Component.options)
-  } else {
-    hotAPI.reload("data-v-ae1c7cdc", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
 
 /* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
@@ -38831,108 +38795,20 @@ module.exports = function spread(callback) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    { staticClass: "card weather-card", on: { click: _vm.click } },
-    [
-      _c("div", { staticClass: "card-body" }, [
-        _c("div", { staticClass: "city-name mb-3" }, [
-          _c("b", [_vm._v(_vm._s(_vm.weather.title))])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-row align-items-center mb-2" }, [
-          _c("div", { staticClass: "col col-auto" }, [
-            _c("img", {
-              staticClass: "weather-icon",
-              attrs: { src: _vm.icon(_vm.showWeather) }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
-            _vm._v(_vm._s(_vm.showWeather.weather_state_name))
-          ])
-        ]),
-        _vm._v(" "),
-        _c("hr"),
-        _vm._v(" "),
-        _c("div", { staticClass: "small" }, [
-          _c("b", [_vm._v("Temp:")]),
-          _vm._v(" " + _vm._s(Math.round(_vm.showWeather.the_temp)) + "°C")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "small" }, [
-          _c("b", [_vm._v("Max:")]),
-          _vm._v(" " + _vm._s(Math.round(_vm.showWeather.max_temp)) + "°C")
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "small" }, [
-          _c("b", [_vm._v("Min:")]),
-          _vm._v(" " + _vm._s(Math.round(_vm.showWeather.min_temp)) + "°C")
-        ])
-      ])
-    ]
-  )
-}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"card weather-card",on:{"click":_vm.click}},[_c('div',{staticClass:"card-body"},[_c('div',{staticClass:"city-name mb-3"},[_c('b',[_vm._v(_vm._s(_vm.weather.title))])]),_vm._v(" "),_c('div',{staticClass:"form-row align-items-center mb-2"},[_c('div',{staticClass:"col col-auto"},[_c('img',{staticClass:"weather-icon",attrs:{"src":_vm.icon(_vm.showWeather)}})]),_vm._v(" "),_c('div',{staticClass:"col"},[_vm._v(_vm._s(_vm.showWeather.weather_state_name))])]),_vm._v(" "),_c('hr'),_vm._v(" "),_c('div',{staticClass:"small"},[_c('b',[_vm._v("Temp:")]),_vm._v(" "+_vm._s(Math.round(_vm.showWeather.the_temp))+"°C")]),_vm._v(" "),_c('div',{staticClass:"small"},[_c('b',[_vm._v("Max:")]),_vm._v(" "+_vm._s(Math.round(_vm.showWeather.max_temp))+"°C")]),_vm._v(" "),_c('div',{staticClass:"small"},[_c('b',[_vm._v("Min:")]),_vm._v(" "+_vm._s(Math.round(_vm.showWeather.min_temp))+"°C")])])])}
 var staticRenderFns = []
-render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-cde962ee", esExports)
-  }
-}
 
 /***/ }),
 /* 172 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("div", { staticClass: "mb-4 h5", attrs: { id: "today" } }, [
-      _vm._v(_vm._s(_vm.formattedDate))
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "row" },
-      _vm._l(_vm.weathers, function(weather) {
-        return _c(
-          "div",
-          { staticClass: "col col-12 col-sm-6 col-md-4 col-lg-3 mb-4" },
-          [
-            _c("weather", {
-              ref: "weather",
-              refInFor: true,
-              attrs: { weather: weather, date: _vm.date },
-              on: { click: _vm.weatherClick }
-            })
-          ],
-          1
-        )
-      })
-    )
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[_c('div',{staticClass:"mb-4 h5",attrs:{"id":"today"}},[_vm._v(_vm._s(_vm.formattedDate))]),_vm._v(" "),_vm._m(0),_vm._v(" "),_c('div',{staticClass:"row"},_vm._l((_vm.weathers),function(weather){return _c('div',{staticClass:"col col-12 col-sm-6 col-md-4 col-lg-3 mb-4"},[_c('weather',{ref:"weather",refInFor:true,attrs:{"weather":weather,"date":_vm.date},on:{"click":_vm.weatherClick}})],1)}))])}
+var staticRenderFns = [function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col col-12"},[_c('p',{staticClass:"small"},[_vm._v("Click in the City box to more info.")])])])}]
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-ae1c7cdc", esExports)
-  }
-}
 
 /***/ }),
 /* 173 */
@@ -38942,8 +38818,7 @@ if (false) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_search_page_script_js__ = __webpack_require__(141);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4ebe67a9_hasScoped_false_buble_transforms_search_page_template_html__ = __webpack_require__(174);
-var disposed = false
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f1b300ec_hasScoped_false_buble_transforms_search_page_template_html__ = __webpack_require__(174);
 var normalizeComponent = __webpack_require__(3)
 /* script */
 
@@ -38959,29 +38834,12 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_search_page_script_js__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4ebe67a9_hasScoped_false_buble_transforms_search_page_template_html__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f1b300ec_hasScoped_false_buble_transforms_search_page_template_html__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "components/search-page.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4ebe67a9", Component.options)
-  } else {
-    hotAPI.reload("data-v-4ebe67a9", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
 
 /* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
@@ -38991,62 +38849,10 @@ if (false) {(function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    !_vm.loading
-      ? _c("div", [
-          _vm.weathers.length
-            ? _c("div", [
-                _c("div", { staticClass: "mb-4 h5", attrs: { id: "today" } }, [
-                  _vm._v(_vm._s(_vm.formattedDate))
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "row" },
-                  _vm._l(_vm.weathers, function(weather) {
-                    return _c(
-                      "div",
-                      {
-                        staticClass:
-                          "col col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-                      },
-                      [
-                        _c("weather", {
-                          ref: "weather",
-                          refInFor: true,
-                          attrs: { weather: weather, date: _vm.date },
-                          on: { click: _vm.weatherClick }
-                        })
-                      ],
-                      1
-                    )
-                  })
-                )
-              ])
-            : _c("div", [
-                _vm._v("No results were found. Try changing the keyword!")
-              ])
-        ])
-      : _c("div", [
-          _c("i", { staticClass: "fa fa-spin fa-refresh" }),
-          _vm._v(" Searching...\n\t")
-        ])
-  ])
-}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',[(!_vm.loading)?_c('div',[(_vm.weathers.length)?_c('div',[_c('div',{staticClass:"mb-4 h5",attrs:{"id":"today"}},[_vm._v(_vm._s(_vm.formattedDate))]),_vm._v(" "),_c('div',{staticClass:"row"},_vm._l((_vm.weathers),function(weather){return _c('div',{staticClass:"col col-12 col-sm-6 col-md-4 col-lg-3 mb-4"},[_c('weather',{ref:"weather",refInFor:true,attrs:{"weather":weather,"date":_vm.date},on:{"click":_vm.weatherClick}})],1)}))]):_c('div',[_vm._v("No results were found. Try changing the keyword!")])]):_c('div',[_c('i',{staticClass:"fa fa-spin fa-refresh"}),_vm._v(" Searching...\n\t")])])}
 var staticRenderFns = []
-render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4ebe67a9", esExports)
-  }
-}
 
 /***/ }),
 /* 175 */
@@ -39056,8 +38862,7 @@ if (false) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_location_page_script_js__ = __webpack_require__(142);
 /* empty harmony namespace reexport */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_563540fc_hasScoped_false_buble_transforms_location_page_template_html__ = __webpack_require__(176);
-var disposed = false
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1dc59777_hasScoped_false_buble_transforms_location_page_template_html__ = __webpack_require__(176);
 var normalizeComponent = __webpack_require__(3)
 /* script */
 
@@ -39073,29 +38878,12 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_location_page_script_js__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_563540fc_hasScoped_false_buble_transforms_location_page_template_html__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_1dc59777_hasScoped_false_buble_transforms_location_page_template_html__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "components/location-page.vue"
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-563540fc", Component.options)
-  } else {
-    hotAPI.reload("data-v-563540fc", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
 
 /* harmony default export */ __webpack_exports__["default"] = (Component.exports);
 
@@ -39105,191 +38893,10 @@ if (false) {(function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm.weather
-    ? _c("div", [
-        _c("p", [
-          _c(
-            "a",
-            {
-              attrs: { href: "#" },
-              on: {
-                click: function($event) {
-                  $event.preventDefault()
-                  return _vm.back($event)
-                }
-              }
-            },
-            [
-              _c("i", {
-                staticClass: "fa fa-long-arrow-left",
-                attrs: { "aria-hidden": "true" }
-              }),
-              _vm._v(" Back\n\t\t")
-            ]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "city-name h2 mb-4" }, [
-          _vm._v(_vm._s(_vm.weather.title))
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card card-body" }, [
-          _c(
-            "div",
-            { staticClass: "row" },
-            _vm._l(_vm.weather.consolidated_weather, function(item) {
-              return _c(
-                "div",
-                { staticClass: "col col-12 col-sm-6 col-md-4 col-lg-3 mb-4" },
-                [
-                  _c(
-                    "div",
-                    { class: _vm.isToday(item) ? "today-item" : null },
-                    [
-                      _c("div", { staticClass: "small mb-2" }, [
-                        _c("b", [
-                          _vm._v(
-                            _vm._s(_vm.formattedDate(item.applicable_date))
-                          )
-                        ])
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "form-row align-items-center mb-2" },
-                        [
-                          _c("div", { staticClass: "col col-auto" }, [
-                            _c("img", {
-                              staticClass: "weather-icon",
-                              attrs: { src: _vm.icon(item) }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "col" }, [
-                            _vm._v(_vm._s(item.weather_state_name))
-                          ])
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("div", { staticClass: "h4" }, [
-                        _vm._v(_vm._s(Math.round(item.the_temp)) + "°C")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "table",
-                        { staticClass: "table table-sm small weather-table" },
-                        [
-                          _c("tr", [
-                            _c("th", { attrs: { scope: "row" } }, [
-                              _vm._v("Temperature")
-                            ]),
-                            _vm._v(" "),
-                            _c("td", [
-                              _vm._v(
-                                "from " +
-                                  _vm._s(Math.round(item.min_temp)) +
-                                  "°C to " +
-                                  _vm._s(Math.round(item.max_temp)) +
-                                  "°C"
-                              )
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("tr", [
-                            _c("th", { attrs: { scope: "row" } }, [
-                              _vm._v("Humidity")
-                            ]),
-                            _vm._v(" "),
-                            _c("td", [_vm._v(_vm._s(item.humidity) + "%")])
-                          ]),
-                          _vm._v(" "),
-                          _c("tr", [
-                            _c("th", { attrs: { scope: "row" } }, [
-                              _vm._v("Wind")
-                            ]),
-                            _vm._v(" "),
-                            _c("td", [
-                              _c("span", { staticClass: "wind" }, [
-                                _c("span", {
-                                  staticClass: "dir",
-                                  class:
-                                    "dir-" +
-                                    item.wind_direction_compass.toLowerCase(),
-                                  attrs: { title: item.wind_direction_compass }
-                                }),
-                                _vm._v(
-                                  "\n                " +
-                                    _vm._s(Math.round(item.wind_speed)) +
-                                    "mph\n              "
-                                )
-                              ])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("tr", [
-                            _c("th", { attrs: { scope: "row" } }, [
-                              _vm._v("Visibility")
-                            ]),
-                            _vm._v(" "),
-                            _c("td", [
-                              item.visibility
-                                ? _c("span", [
-                                    _vm._v(
-                                      _vm._s(item.visibility.toFixed(1)) +
-                                        " miles"
-                                    )
-                                  ])
-                                : _c("span", [_vm._v("N/A")])
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("tr", [
-                            _c("th", { attrs: { scope: "row" } }, [
-                              _vm._v("Pressure")
-                            ]),
-                            _vm._v(" "),
-                            _c("td", [
-                              _vm._v(
-                                _vm._s(Math.round(item.air_pressure)) + "mb"
-                              )
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("tr", [
-                            _c("th", { attrs: { scope: "row" } }, [
-                              _vm._v("Confidence")
-                            ]),
-                            _vm._v(" "),
-                            _c("td", [
-                              _vm._v(_vm._s(item.predictability) + "%")
-                            ])
-                          ])
-                        ]
-                      )
-                    ]
-                  )
-                ]
-              )
-            })
-          )
-        ])
-      ])
-    : _vm._e()
-}
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return (_vm.weather)?_c('div',[_c('p',[_c('a',{attrs:{"href":"#"},on:{"click":function($event){$event.preventDefault();return _vm.back($event)}}},[_c('i',{staticClass:"fa fa-long-arrow-left",attrs:{"aria-hidden":"true"}}),_vm._v(" Back\n\t\t")])]),_vm._v(" "),_c('div',{staticClass:"city-name h2 mb-4"},[_vm._v(_vm._s(_vm.weather.title))]),_vm._v(" "),_c('div',{staticClass:"card card-body"},[_c('div',{staticClass:"row"},_vm._l((_vm.weather.consolidated_weather),function(item){return _c('div',{staticClass:"col col-12 col-sm-6 col-md-4 col-lg-3 mb-4"},[_c('div',{class:_vm.isToday(item) ? 'today-item' : null},[_c('div',{staticClass:"small mb-2"},[_c('b',[_vm._v(_vm._s(_vm.formattedDate(item.applicable_date)))])]),_vm._v(" "),_c('div',{staticClass:"form-row align-items-center mb-2"},[_c('div',{staticClass:"col col-auto"},[_c('img',{staticClass:"weather-icon",attrs:{"src":_vm.icon(item)}})]),_vm._v(" "),_c('div',{staticClass:"col"},[_vm._v(_vm._s(item.weather_state_name))])]),_vm._v(" "),_c('div',{staticClass:"h4"},[_vm._v(_vm._s(Math.round(item.the_temp))+"°C")]),_vm._v(" "),_c('table',{staticClass:"table table-sm small weather-table"},[_c('tr',[_c('th',{attrs:{"scope":"row"}},[_vm._v("Temperature")]),_vm._v(" "),_c('td',[_vm._v("from "+_vm._s(Math.round(item.min_temp))+"°C to "+_vm._s(Math.round(item.max_temp))+"°C")])]),_vm._v(" "),_c('tr',[_c('th',{attrs:{"scope":"row"}},[_vm._v("Humidity")]),_vm._v(" "),_c('td',[_vm._v(_vm._s(item.humidity)+"%")])]),_vm._v(" "),_c('tr',[_c('th',{attrs:{"scope":"row"}},[_vm._v("Wind")]),_vm._v(" "),_c('td',[_c('span',{staticClass:"wind"},[_c('span',{staticClass:"dir",class:'dir-' +  item.wind_direction_compass.toLowerCase(),attrs:{"title":item.wind_direction_compass}}),_vm._v("\n                "+_vm._s(Math.round(item.wind_speed))+"mph\n              ")])])]),_vm._v(" "),_c('tr',[_c('th',{attrs:{"scope":"row"}},[_vm._v("Visibility")]),_vm._v(" "),_c('td',[(item.visibility)?_c('span',[_vm._v(_vm._s(item.visibility.toFixed(1))+" miles")]):_c('span',[_vm._v("N/A")])])]),_vm._v(" "),_c('tr',[_c('th',{attrs:{"scope":"row"}},[_vm._v("Pressure")]),_vm._v(" "),_c('td',[_vm._v(_vm._s(Math.round(item.air_pressure))+"mb")])]),_vm._v(" "),_c('tr',[_c('th',{attrs:{"scope":"row"}},[_vm._v("Confidence")]),_vm._v(" "),_c('td',[_vm._v(_vm._s(item.predictability)+"%")])])])])])}))])]):_vm._e()}
 var staticRenderFns = []
-render._withStripped = true
 var esExports = { render: render, staticRenderFns: staticRenderFns }
 /* harmony default export */ __webpack_exports__["a"] = (esExports);
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-563540fc", esExports)
-  }
-}
 
 /***/ })
 /******/ ]);
