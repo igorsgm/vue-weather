@@ -19,7 +19,7 @@ git clone https://github.com/igorsgm/codeline-vue-weather.git
 
 cd codeline-vue-weather
 
-npm install install
+npm install
 ```
 
 ##### Compiling assets
