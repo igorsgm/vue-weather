@@ -6,11 +6,11 @@ Using [weather.php](https://github.com/igorsgm/codeline-vue-weather/blob/master/
 
 ##### Home Screen
 
-![Home Page](https://raw.githubusercontent.com/igorsgm/codeline-vue-weather/master/images/home.png)
+![Home Page](https://raw.githubusercontent.com/igorsgm/vue-weather/master/images/home.png)
 
 
 ##### City Screen
-![London](https://raw.githubusercontent.com/igorsgm/codeline-vue-weather/master/images/london.png)
+![London](https://raw.githubusercontent.com/igorsgm/vue-weather/master/images/london.png)
 
 ## Getting Started and Installing
 
