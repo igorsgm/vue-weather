@@ -1,4 +1,4 @@
-# Codeline Vue Weather
+# Vue Weather
 
 This is a Frontend test assignment of Codeline. Weather App Using Vue JS.
 
@@ -15,9 +15,9 @@ Using [weather.php](https://github.com/igorsgm/vue-weather/blob/master/public/we
 ## Getting Started and Installing
 
 ```
-git clone https://github.com/igorsgm/codeline-vue-weather.git
+git clone https://github.com/igorsgm/vue-weather.git
 
-cd codeline-vue-weather
+cd vue-weather
 
 npm install
 ```
