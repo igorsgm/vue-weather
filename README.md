@@ -2,7 +2,7 @@
 
 This is a Frontend test assignment of Codeline. Weather App Using Vue JS.
 
-Using [weather.php](https://github.com/igorsgm/codeline-vue-weather/blob/master/public/weather.php) as data source. This script mirrors data from MetaWether.com. It has two commands. Inspect the script to understand what it does. Then scan MW website for necessary documentation regarding the icons, the response format.
+Using [weather.php](https://github.com/igorsgm/vue-weather/blob/master/public/weather.php) as data source. This script mirrors data from MetaWether.com. It has two commands. Inspect the script to understand what it does. Then scan MW website for necessary documentation regarding the icons, the response format.
 
 ##### Home Screen
 
